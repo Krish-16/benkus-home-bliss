@@ -224,7 +224,7 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  .logo { width: 130px; height: 130px; }
+  .logo { width: 124px; height: 124px; }
   .footer-logo { width: 60px; height: 60px; }
   .footer-description { font-size: 0.98rem; }
   .cushion-item img { width: 110px; height: 110px; }
