@@ -10,7 +10,7 @@ body {
 
 header {
   text-align: center;
-  background: linear-gradient(90deg, #f9d5dc 40%, #ffe6ec 100%);
+  background: linear-gradient(90deg, #f9d5dc 40%, #fad1db 100%);
   padding: 2.5rem 1rem 2rem 1rem;
   box-shadow: 0 2px 12px rgba(184,80,66,0.06);
   border-bottom-left-radius: 60px;
