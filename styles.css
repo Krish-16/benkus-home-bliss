@@ -224,6 +224,7 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  .cushion-list {grid-template-columns: repeat(3, 1fr);  }
   .logo { width: 124px; height: 124px; }
   .footer-logo { width: 60px; height: 60px; }
   .footer-description { font-size: 0.98rem; }
