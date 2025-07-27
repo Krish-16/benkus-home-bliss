@@ -20,8 +20,8 @@ header {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-bottom: 1rem;
   animation: pop 1.2s cubic-bezier(.55,1.5,.55,1);
@@ -224,7 +224,7 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  .logo { width: 82px; height: 82px; }
+  .logo { width: 130px; height: 130px; }
   .footer-logo { width: 60px; height: 60px; }
   .footer-description { font-size: 0.98rem; }
   .cushion-item img { width: 110px; height: 110px; }
