@@ -10,7 +10,7 @@ body {
 
 header {
   text-align: center;
-  background: linear-gradient(90deg, #f9d5dc 40%, #fad1db 100%);
+  background: linear-gradient(90deg, #f9d5dc 40%, #ffe6ec 100%);
   padding: 2.5rem 1rem 2rem 1rem;
   box-shadow: 0 2px 12px rgba(184,80,66,0.06);
   border-bottom-left-radius: 60px;
@@ -20,8 +20,8 @@ header {
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
   animation: pop 1.2s cubic-bezier(.55,1.5,.55,1);
@@ -57,7 +57,7 @@ section {
   margin: 0 auto;
 }
 
-.intro h2, .why-choose h2, .about h2, .our-cushions h2, .instagram h2 {
+.intro h2, .why-choose h2, .about h2, .our-cushions h2, .instagram h2, .extra-gallery-section h2, .gallery-page h2 {
   font-size: 2.1rem;
   color: #832f49;
   letter-spacing: 1px;
@@ -79,7 +79,7 @@ section {
   font-size: 1.08rem;
 }
 
-/* Our Cushions section */
+/* ----------- Best Sellers / Products Section --------- */
 .our-cushions {
   padding: 2rem 1rem 2rem 1rem;
   max-width: 1000px;
@@ -113,6 +113,126 @@ section {
   box-shadow: 0 6px 24px rgba(255, 139, 157, 0.12);
   border: 2px solid #fff3;
   background: #fff;
+  transition: transform 0.18s;
+  margin: auto;
+}
+.cushion-item img:hover {
+  transform: scale(1.05);
+}
+
+/* ----------- Extra Gallery Link Section --------- */
+.extra-gallery-section {
+  background: #fff9fb;
+  text-align: center;
+  padding: 2.3rem 1rem;
+  border-radius: 22px;
+  margin: 2.5rem auto 0 auto;
+  max-width: 700px;
+  box-shadow: 0 2px 18px #fbdde277;
+}
+.extra-gallery-section h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #b85042;
+}
+.extra-gallery-section .gallery-link-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 2.1rem;
+  background: #f48ca5;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 26px;
+  font-size: 1.06rem;
+  box-shadow: 0 4px 19px #fbdde277;
+  transition: background 0.18s, transform 0.18s;
+}
+.extra-gallery-section .gallery-link-btn:hover {
+  background: #e45d7b;
+  transform: scale(1.06);
+}
+
+/* ----------- Full Gallery Page ----------- */
+.gallery-page {
+  padding: 2.2rem 1rem 2.4rem 1rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.gallery-page h2 {
+  font-size: 2.2rem;
+  color: #7d3f4c;
+}
+.gallery-whatsapp-note {
+  font-size: 1.09rem;
+  margin-bottom: 1.2rem;
+  color: #db476b;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin: 1.7rem auto 2.4rem auto;
+}
+.gallery-grid img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 13px;
+  box-shadow: 0 6px 24px rgba(255, 139, 157, 0.12);
+  border: 2px solid #fff3;
+  background: #fff;
+  transition: transform 0.18s;
+  cursor: pointer;
+  margin: auto;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+.gallery-whatsapp-bar {
+  margin: 2.5rem 0 0 0;
+}
+.whatsapp-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 34px;
+  background: #25D366;
+  color: #fff;
+  font-size: 1.11rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 16px #25d36544;
+  transition: background 0.2s, transform 0.15s;
+}
+.whatsapp-btn:hover {
+  background: #20ba5a;
+  transform: scale(1.04);
+}
+
+@media (max-width: 1100px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .gallery-grid img,
+  .cushion-item img {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Instagram Feed Section button */
@@ -222,43 +342,39 @@ section {
   color: #adb5bc;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for footer and grid */
 @media (max-width: 600px) {
-  .cushion-list {grid-template-columns: repeat(2, 1fr);  }
-  .logo { width: 124px; height: 124px; }
+  .logo { width: 82px; height: 82px; }
   .footer-logo { width: 60px; height: 60px; }
   .footer-description { font-size: 0.98rem; }
-  .cushion-item img { width: 110px; height: 110px; }
+  .cushion-item img,
+  .gallery-grid img { width: 110px; height: 110px; }
   .cushion-title { font-size: 1rem; }
   h1 { font-size: 1.36rem; }
 }
-/* Lightbox Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  align-items: center;
-  justify-content: center;
+.back-button-container {
+  max-width: 1100px;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1rem;
+  text-align: left; /* aligns left */
 }
 
-.lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #fff3;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
+.back-button {
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  background: #f48ca5;
   color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10000;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px #fbdde277;
+  transition: background 0.25s, transform 0.18s;
+  user-select: none;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background: #e45d7b;
+  transform: scale(1.06);
 }
