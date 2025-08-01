@@ -20,8 +20,8 @@ header {
 }
 
 .logo {
-  width: 180px;
-  height: 180px;
+  width: 165px;
+  height: 165px;
   border-radius: 50%;
   margin-bottom: 1rem;
   animation: pop 1.2s cubic-bezier(.55,1.5,.55,1);
@@ -205,7 +205,7 @@ section {
 .whatsapp-btn {
   display: inline-block;
   padding: 1rem 1.5rem;
-  border-radius: 21px;
+  border-radius: 25px;
   background: #25D366;
   color: #fff;
   font-size: 1.11rem;
@@ -354,7 +354,7 @@ section {
 
 /* Responsive adjustments for footer and grid */
 @media (max-width: 600px) {
-  .logo { width: 120px; height: 120px; }
+  .logo { width: 100px; height: 100px; }
   .footer-logo { width: 60px; height: 60px; }
   .footer-description { font-size: 0.98rem; }
   .cushion-item img,
