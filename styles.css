@@ -229,7 +229,7 @@ section {
 @media (max-width: 700px) {
   .gallery-grid,
   .cushion-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
   .gallery-grid img,
