@@ -138,4 +138,34 @@
     </div>
   </footer>
 </body>
+<!-- Lightbox -->
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="Zoomed Cushion" />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const imageGrid = document.querySelector(".cushion-list");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    if (imageGrid && lightbox && lightboxImg) {
+      imageGrid.addEventListener("click", function (e) {
+        if (e.target.tagName === "IMG") {
+          lightboxImg.src = e.target.src;
+          lightboxImg.alt = e.target.alt;
+          lightbox.style.display = "flex";
+        }
+      });
+
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+          lightboxImg.src = "";
+        }
+      });
+    }
+  });
+</script>
+
 </html>
